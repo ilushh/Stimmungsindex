@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/Minzeblatt_SVG.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stimmungsindex</title>
+</head>
+<body>
+  <h1>Stimmungsindex</h1>
+  <form id="survey-form">
+    <div class="question">
+      <label for="question1">1. Wie motiviert waren Sie heute morgen?</label>
+      <input type="range" min="1" max="10" value="5" id="question1" class="slider">
+      <span id="question1-value" class="value">5</span>
+    </div>
+
+    <div class="question">
+      <label for="question2">2. Wie motiviert sind Sie jetzt für den weiteren Tagesverlauf?</label>
+      <input type="range" min="1" max="10" value="5" id="question2" class="slider">
+      <span id="question2-value" class="value">5</span>
+    </div>
+
+    <div class="question">
+      <label for="question3">3. Wie fühlen Sie sich heute insgesamt?</label>
+      <input type="range" min="1" max="10" value="5" id="question3" class="slider">
+      <span id="question3-value" class="value">5</span>
+    </div>
+
+    <div class="question">
+      <label for="question4">4. Wie gut konnten Sie sich heute konzentrieren?</label>
+      <input type="range" min="1" max="10" value="5" id="question4" class="slider">
+      <span id="question4-value" class="value">5</span>
+    </div>
+
+    <div class="question">
+      <label for="question5">5. Wie optimistisch sind Sie, was die Zukunft betrifft?</label>
+      <input type="range" min="1" max="10" value="5" id="question5" class="slider">
+      <span id="question5-value" class="value">5</span>
+    </div>
+
+<!-- Hier ist der BEreich von den Ergebnissen -->
+        <button type="submit">Absenden</button>
+        </form>
+        
+        <div class="result-page">
+          <h2 id="result"></h2>
+        </div>
+        
+        <div id="result"></div>
+        
+        
+<!-- JS -->
+<script type="module" src="/main.js"></script>
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+</body>
+</html>
