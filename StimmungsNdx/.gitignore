@@ -7,12 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+
 dist
 dist-ssr
 *.local
-C:\Users\julid\Downloads\Programmieren\GitHub\Stimmungsindex\StimmungsNdx\node_modules
-C:\Users\julid\Downloads\Programmieren\GitHub\Stimmungsindex\StimmungsNdx\node_modules
 
 # Editor directories and files
 .vscode/*
