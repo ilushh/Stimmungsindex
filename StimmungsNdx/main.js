@@ -1,4 +1,35 @@
+//einfach eingesetzt was auf firebase war
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+//dieser import ist vom random programm nicht 
+import { onSnapshot, getDoc, getDocFromCache, doc, getFirestore, addDoc, DocumentSnapshot, Firestore, DocumentReference, updateDoc, setDoc, getDocs, collection, documentId } from "firebase/firestore";
 import './style.css'
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBRgqLBodBJg4KwkGpjRIJ_7mpe0wvuL50",
+  authDomain: "stimmungsndx.firebaseapp.com",
+  projectId: "stimmungsndx",
+  storageBucket: "stimmungsndx.appspot.com",
+  messagingSenderId: "435372091585",
+  appId: "1:435372091585:web:1283bf0a6213b26133cc40",
+  measurementId: "G-GTBBJ107V5"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+const db = getFirestore();
+
+//function  für Textfeld 1
+document.getElementById("go").addEventListener("click", () => {
+  alert("Ihre Stimmungseingaben werden an den Server gesendet")
+  const docRef = addDoc(collection(db,"User"), {
+    Text: document.getElementById("input").value
+  })
+})
 // import javascriptLogo from './javascript.svg'
 // import { setupCounter } from './counter.js'
 
@@ -35,7 +66,7 @@ const result = document.querySelector("#result"); // Für einzelne Teilnehmer
 const results = [];
 
 
-/*Code snippetr hat die Aufgabe für jedes Input-Element in der in der Variable "sliders" 
+/*Code snippet hat die Aufgabe für jedes Input-Element in der in der Variable "sliders" 
 gespeicherten Liste von HTML-Elementen, einen Event-Listener zu registrieren, 
 der auf das "input"-Event reagiert.*/
 
@@ -70,12 +101,6 @@ container.className = 'centered'; // um mit CSS arbeiten zu können bezogen auf 
 container.innerHTML = `Teilnehmer ${results.length}: ${average}<br>`;
 
 document.body.appendChild(container);
-
-
-
-
-
-
 
 
 // nach 20 Eingaben werden die Einträge gelöscht
